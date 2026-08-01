@@ -1,0 +1,445 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1560" viewBox="0 0 1480 1560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#5f5e5a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="tri" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="13" markerHeight="13" orient="auto-start-reverse">
+      <path d="M1 1 L13 7 L1 13 Z" fill="#ffffff" stroke="#5f5e5a" stroke-width="1.2" stroke-linejoin="round"/>
+    </marker>
+    <marker id="dia" viewBox="0 0 16 12" refX="1" refY="6" markerWidth="15" markerHeight="11" orient="auto-start-reverse">
+      <path d="M1 6 L8 1 L15 6 L8 11 Z" fill="#5f5e5a" stroke="#5f5e5a"/>
+    </marker>
+    <style>
+      .title  { font-size: 30px; font-weight: 600; fill: #2c2c2a; }
+      .subtle { font-size: 15px; fill: #5f5e5a; }
+      .phdr   { font-size: 17px; font-weight: 600; }
+      .cls    { font-size: 14px; font-weight: 600; fill: #2c2c2a; }
+      .abs    { font-size: 14px; font-weight: 600; font-style: italic; fill: #2c2c2a; }
+      .fld    { font-size: 12px; fill: #444441; }
+      .lbl    { font-size: 12px; fill: #5f5e5a; }
+      .lgd    { font-size: 13px; fill: #444441; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1480" height="1560" fill="#faf9f5"/>
+
+  <!-- Header -->
+  <text x="40" y="52" class="title">2D Platformer — Class Architecture</text>
+  <text x="40" y="80" class="subtle">All subsystems. Solid diamond = composition (owns). Open diamond = aggregation (references). Triangle = inheritance. Arrow = uses / drives.</text>
+
+  <!-- ============ CORE (center top) ============ -->
+  <g>
+    <rect x="560" y="110" width="360" height="196" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+    <text x="580" y="136" class="phdr" fill="#26215C">Core loop</text>
+
+    <rect x="580" y="150" width="150" height="140" rx="8" fill="#ffffff" stroke="#7F77DD" stroke-width="1"/>
+    <text x="595" y="170" class="cls">GameManager</text>
+    <line x1="580" y1="178" x2="730" y2="178" stroke="#CECBF6"/>
+    <text x="595" y="196" class="fld">- instance : GM$</text>
+    <text x="595" y="213" class="fld">+ gameState</text>
+    <text x="595" y="230" class="fld">+ deltaTime</text>
+    <text x="595" y="247" class="fld">+ update()</text>
+    <text x="595" y="264" class="fld">+ changeState()</text>
+    <text x="595" y="281" class="fld">+ pauseGame()</text>
+
+    <rect x="750" y="150" width="150" height="70" rx="8" fill="#ffffff" stroke="#7F77DD" stroke-width="1"/>
+    <text x="765" y="170" class="cls">EventBus</text>
+    <line x1="750" y1="178" x2="900" y2="178" stroke="#CECBF6"/>
+    <text x="765" y="196" class="fld">+ subscribe()</text>
+    <text x="765" y="213" class="fld">+ emit(evt)</text>
+
+    <rect x="750" y="230" width="150" height="60" rx="8" fill="#ffffff" stroke="#7F77DD" stroke-width="1"/>
+    <text x="765" y="250" class="cls">SceneManager</text>
+    <line x1="750" y1="258" x2="900" y2="258" stroke="#CECBF6"/>
+    <text x="765" y="276" class="fld">+ loadScene()</text>
+
+    <line x1="730" y1="200" x2="748" y2="185" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <line x1="730" y1="240" x2="748" y2="255" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ============ PLAYER + ABILITIES ============ -->
+  <g>
+    <rect x="40" y="360" width="330" height="410" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"/>
+    <text x="60" y="386" class="phdr" fill="#04342C">Player &amp; abilities</text>
+
+    <rect x="60" y="402" width="140" height="60" rx="8" fill="#ffffff" stroke="#1D9E75" stroke-width="1"/>
+    <text x="75" y="422" class="cls">PlayerController</text>
+    <line x1="60" y1="430" x2="200" y2="430" stroke="#9FE1CB"/>
+    <text x="75" y="448" class="fld">+ handleInput()</text>
+
+    <rect x="210" y="402" width="140" height="112" rx="8" fill="#ffffff" stroke="#1D9E75" stroke-width="1"/>
+    <text x="225" y="422" class="cls">Player</text>
+    <line x1="210" y1="430" x2="350" y2="430" stroke="#9FE1CB"/>
+    <text x="225" y="448" class="fld">+ health / stamina</text>
+    <text x="225" y="465" class="fld">+ position, velocity</text>
+    <text x="225" y="482" class="fld">+ move() jump()</text>
+    <text x="225" y="499" class="fld">+ interact()</text>
+
+    <rect x="210" y="536" width="140" height="72" rx="8" fill="#ffffff" stroke="#1D9E75" stroke-width="1"/>
+    <text x="225" y="556" class="cls">AbilityManager</text>
+    <line x1="210" y1="564" x2="350" y2="564" stroke="#9FE1CB"/>
+    <text x="225" y="582" class="fld">+ unlock(ability)</text>
+    <text x="225" y="599" class="fld">+ activate(id)</text>
+
+    <rect x="60" y="632" width="140" height="86" rx="8" fill="#ffffff" stroke="#1D9E75" stroke-width="1"/>
+    <text x="75" y="652" class="abs">«Ability»</text>
+    <line x1="60" y1="660" x2="200" y2="660" stroke="#9FE1CB"/>
+    <text x="75" y="678" class="fld">+ name</text>
+    <text x="75" y="695" class="fld">+ staminaCost</text>
+    <text x="75" y="712" class="fld">+ activate()*</text>
+
+    <rect x="215" y="632" width="140" height="122" rx="8" fill="#f7fdfb" stroke="#5DCAA5" stroke-width="1"/>
+    <text x="230" y="650" class="fld">DoubleJump</text>
+    <text x="230" y="668" class="fld">Glide</text>
+    <text x="230" y="686" class="fld">WallClimb</text>
+    <text x="230" y="704" class="fld">SpiritHearing</text>
+    <text x="230" y="722" class="fld">NatureVision</text>
+    <text x="230" y="744" class="lbl">: Ability subclasses</text>
+
+    <line x1="200" y1="432" x2="208" y2="440" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <path d="M280 514 L280 536" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M210 572 L200 610 L130 610 L130 632" fill="none" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="215" y1="670" x2="200" y2="674" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#tri)"/>
+  </g>
+
+  <!-- ============ WORLD / WEATHER / PUZZLES ============ -->
+  <g>
+    <rect x="400" y="360" width="360" height="410" rx="12" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"/>
+    <text x="420" y="386" class="phdr" fill="#412402">World, weather &amp; puzzles</text>
+
+    <rect x="420" y="402" width="150" height="76" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="435" y="422" class="cls">WorldManager</text>
+    <line x1="420" y1="430" x2="570" y2="430" stroke="#FAC775"/>
+    <text x="435" y="448" class="fld">+ loadRegion()</text>
+    <text x="435" y="465" class="fld">+ getRegionAt()</text>
+
+    <rect x="590" y="402" width="150" height="76" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="605" y="422" class="cls">Region</text>
+    <line x1="590" y1="430" x2="740" y2="430" stroke="#FAC775"/>
+    <text x="605" y="448" class="fld">+ biomeType</text>
+    <text x="605" y="465" class="fld">+ isDiscovered</text>
+
+    <rect x="420" y="500" width="150" height="58" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="435" y="520" class="cls">WeatherSystem</text>
+    <line x1="420" y1="528" x2="570" y2="528" stroke="#FAC775"/>
+    <text x="435" y="546" class="fld">+ changeWeather()</text>
+
+    <rect x="420" y="570" width="150" height="58" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="435" y="590" class="cls">DayNightCycle</text>
+    <line x1="420" y1="598" x2="570" y2="598" stroke="#FAC775"/>
+    <text x="435" y="616" class="fld">+ advanceTime()</text>
+
+    <rect x="590" y="500" width="150" height="70" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="605" y="520" class="abs">«Interactable»</text>
+    <line x1="590" y1="528" x2="740" y2="528" stroke="#FAC775"/>
+    <text x="605" y="546" class="fld">+ requiredAbility</text>
+    <text x="605" y="563" class="fld">+ interact()*</text>
+
+    <rect x="590" y="582" width="150" height="60" rx="8" fill="#fffdf7" stroke="#EF9F27" stroke-width="1"/>
+    <text x="605" y="600" class="fld">Mechanism, Movable</text>
+    <text x="605" y="617" class="fld">Plant, Bridge</text>
+    <text x="605" y="634" class="lbl">: Interactable kinds</text>
+
+    <rect x="420" y="654" width="150" height="58" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="435" y="674" class="cls">PuzzleSystem</text>
+    <line x1="420" y1="682" x2="570" y2="682" stroke="#FAC775"/>
+    <text x="435" y="700" class="fld">+ checkCompletion()</text>
+
+    <rect x="590" y="654" width="150" height="76" rx="8" fill="#ffffff" stroke="#BA7517" stroke-width="1"/>
+    <text x="605" y="674" class="abs">«Puzzle»</text>
+    <line x1="590" y1="682" x2="740" y2="682" stroke="#FAC775"/>
+    <text x="605" y="700" class="fld">Sound / Light /</text>
+    <text x="605" y="717" class="fld">Nature / Mechanism</text>
+
+    <line x1="570" y1="440" x2="588" y2="440" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M495 478 L495 500" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M495 478 L495 490 L620 490 L620 500" fill="none" stroke="#5f5e5a" stroke-width="1.2"/>
+    <path d="M665 570 L665 582" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#tri)"/>
+    <line x1="570" y1="683" x2="588" y2="690" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M665 730 L665 745 L640 745" fill="none" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <text x="612" y="748" class="lbl">uses Interactable</text>
+  </g>
+
+  <!-- ============ WILDLIFE + STORY ============ -->
+  <g>
+    <rect x="790" y="360" width="360" height="410" rx="12" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+    <text x="810" y="386" class="phdr" fill="#4B1528">Wildlife &amp; story</text>
+
+    <rect x="810" y="402" width="150" height="58" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="825" y="422" class="cls">WildlifeManager</text>
+    <line x1="810" y1="430" x2="960" y2="430" stroke="#F4C0D1"/>
+    <text x="825" y="448" class="fld">+ spawnAnimal()</text>
+
+    <rect x="980" y="402" width="150" height="92" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="995" y="422" class="cls">Animal</text>
+    <line x1="980" y1="430" x2="1130" y2="430" stroke="#F4C0D1"/>
+    <text x="995" y="448" class="fld">+ species</text>
+    <text x="995" y="465" class="fld">+ reactToPlayer()</text>
+    <text x="995" y="482" class="fld">+ reactToWeather()</text>
+
+    <rect x="810" y="486" width="150" height="76" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="825" y="506" class="cls">AIStateMachine</text>
+    <line x1="810" y1="514" x2="960" y2="514" stroke="#F4C0D1"/>
+    <text x="825" y="532" class="fld">+ transition()</text>
+    <text x="825" y="549" class="lbl">Idle/Wander/Flee/</text>
+
+    <rect x="980" y="520" width="150" height="58" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="995" y="540" class="cls">AnimalVoice</text>
+    <line x1="980" y1="548" x2="1130" y2="548" stroke="#F4C0D1"/>
+    <text x="995" y="566" class="fld">+ collect()</text>
+
+    <rect x="810" y="596" width="150" height="76" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="825" y="616" class="cls">EcosystemManager</text>
+    <line x1="810" y1="624" x2="960" y2="624" stroke="#F4C0D1"/>
+    <text x="825" y="642" class="fld">+ restorationLevel</text>
+    <text x="825" y="659" class="fld">+ restoreVoice()</text>
+
+    <rect x="810" y="690" width="150" height="66" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="825" y="710" class="cls">StoryManager</text>
+    <line x1="810" y1="718" x2="960" y2="718" stroke="#F4C0D1"/>
+    <text x="825" y="736" class="fld">+ storyFlags : Map</text>
+    <text x="825" y="753" class="fld">+ advanceChapter()</text>
+
+    <rect x="980" y="690" width="150" height="50" rx="8" fill="#ffffff" stroke="#D4537E" stroke-width="1"/>
+    <text x="995" y="710" class="cls">LoreEntry</text>
+    <line x1="980" y1="718" x2="1130" y2="718" stroke="#F4C0D1"/>
+    <text x="995" y="736" class="fld">+ isDiscovered</text>
+
+    <line x1="960" y1="440" x2="978" y2="440" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M1010 494 L1010 510 L885 510 L885 486" fill="none" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M1055 494 L1055 520" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <path d="M960 549 L978 549" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <path d="M885 672 L885 690" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <text x="890" y="686" class="lbl">progresses</text>
+    <line x1="960" y1="715" x2="978" y2="715" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+  </g>
+
+  <!-- ============ NPC + DIALOGUE + QUESTS ============ -->
+  <g>
+    <rect x="40" y="820" width="450" height="380" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+    <text x="60" y="846" class="phdr" fill="#042C53">NPCs, dialogue &amp; quests</text>
+
+    <rect x="60" y="862" width="130" height="58" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="75" y="882" class="cls">NPCManager</text>
+    <line x1="60" y1="890" x2="190" y2="890" stroke="#B5D4F4"/>
+    <text x="75" y="908" class="fld">+ getNPC(id)</text>
+
+    <rect x="210" y="862" width="130" height="76" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="225" y="882" class="abs">«NPC»</text>
+    <line x1="210" y1="890" x2="340" y2="890" stroke="#B5D4F4"/>
+    <text x="225" y="908" class="fld">+ dialogueTree</text>
+    <text x="225" y="925" class="fld">+ startDialogue()</text>
+
+    <rect x="360" y="862" width="110" height="76" rx="8" fill="#f7fbff" stroke="#85B7EB" stroke-width="1"/>
+    <text x="375" y="882" class="fld">Villager</text>
+    <text x="375" y="900" class="fld">Spirit</text>
+    <text x="375" y="918" class="fld">Traveler</text>
+    <text x="375" y="936" class="lbl">Guardian…</text>
+
+    <rect x="60" y="958" width="150" height="72" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="75" y="978" class="cls">DialogueSystem</text>
+    <line x1="60" y1="986" x2="210" y2="986" stroke="#B5D4F4"/>
+    <text x="75" y="1004" class="fld">+ choose(option)</text>
+    <text x="75" y="1021" class="fld">+ endConversation()</text>
+
+    <rect x="230" y="958" width="150" height="72" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="245" y="978" class="cls">DialogueNode</text>
+    <line x1="230" y1="986" x2="380" y2="986" stroke="#B5D4F4"/>
+    <text x="245" y="1004" class="fld">+ text, options</text>
+    <text x="245" y="1021" class="fld">+ conditions</text>
+
+    <rect x="60" y="1058" width="150" height="88" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="75" y="1078" class="cls">QuestManager</text>
+    <line x1="60" y1="1086" x2="210" y2="1086" stroke="#B5D4F4"/>
+    <text x="75" y="1104" class="fld">+ startQuest()</text>
+    <text x="75" y="1121" class="fld">+ updateObjective()</text>
+    <text x="75" y="1138" class="fld">+ completeQuest()</text>
+
+    <rect x="230" y="1058" width="150" height="88" rx="8" fill="#ffffff" stroke="#378ADD" stroke-width="1"/>
+    <text x="245" y="1078" class="abs">«Quest»</text>
+    <line x1="230" y1="1086" x2="380" y2="1086" stroke="#B5D4F4"/>
+    <text x="245" y="1104" class="fld">+ objectives, state</text>
+    <text x="245" y="1121" class="fld">+ rewards</text>
+    <text x="245" y="1138" class="fld">+ checkCompletion()</text>
+
+    <rect x="395" y="1058" width="80" height="88" rx="8" fill="#f7fbff" stroke="#85B7EB" stroke-width="1"/>
+    <text x="408" y="1080" class="fld">Main</text>
+    <text x="408" y="1100" class="fld">Side</text>
+    <text x="408" y="1120" class="fld">Explore</text>
+    <text x="405" y="1140" class="lbl">Quests</text>
+
+    <line x1="190" y1="890" x2="208" y2="890" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="360" y1="900" x2="342" y2="900" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#tri)"/>
+    <line x1="210" y1="994" x2="228" y2="994" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <path d="M290 938 L290 958" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <text x="295" y="952" class="lbl">owns tree</text>
+    <line x1="210" y1="1102" x2="228" y2="1102" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="380" y1="1102" x2="393" y2="1102" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#tri)"/>
+    <path d="M135 938 L135 1058" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+    <text x="90" y="1052" class="lbl">gives quests</text>
+  </g>
+
+  <!-- ============ INVENTORY / MAP / SAVE / ACHIEVEMENTS ============ -->
+  <g>
+    <rect x="520" y="820" width="450" height="380" rx="12" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1"/>
+    <text x="540" y="846" class="phdr" fill="#173404">Inventory, map, save &amp; achievements</text>
+
+    <rect x="540" y="862" width="150" height="76" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="555" y="882" class="cls">Inventory</text>
+    <line x1="540" y1="890" x2="690" y2="890" stroke="#C0DD97"/>
+    <text x="555" y="908" class="fld">+ addItem()</text>
+    <text x="555" y="925" class="fld">+ hasItem(id)</text>
+
+    <rect x="710" y="862" width="120" height="76" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="725" y="882" class="abs">«Item»</text>
+    <line x1="710" y1="890" x2="830" y2="890" stroke="#C0DD97"/>
+    <text x="725" y="908" class="fld">+ name, icon</text>
+    <text x="725" y="925" class="fld">+ description</text>
+
+    <rect x="850" y="862" width="100" height="90" rx="8" fill="#f8fcf1" stroke="#97C459" stroke-width="1"/>
+    <text x="863" y="882" class="fld">Artifact</text>
+    <text x="863" y="900" class="fld">Key</text>
+    <text x="863" y="918" class="fld">Collectible</text>
+    <text x="863" y="936" class="fld">Material</text>
+    <text x="863" y="951" class="lbl">QuestItem</text>
+
+    <rect x="540" y="970" width="150" height="76" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="555" y="990" class="cls">MapSystem</text>
+    <line x1="540" y1="998" x2="690" y2="998" stroke="#C0DD97"/>
+    <text x="555" y="1016" class="fld">+ revealLocation()</text>
+    <text x="555" y="1033" class="fld">+ fastTravel()</text>
+
+    <rect x="710" y="970" width="140" height="76" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="725" y="990" class="cls">MapLocation</text>
+    <line x1="710" y1="998" x2="850" y2="998" stroke="#C0DD97"/>
+    <text x="725" y="1016" class="fld">+ isDiscovered</text>
+    <text x="725" y="1033" class="lbl">▸ FastTravelPoint</text>
+
+    <rect x="540" y="1066" width="150" height="76" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="555" y="1086" class="cls">SaveSystem</text>
+    <line x1="540" y1="1094" x2="690" y2="1094" stroke="#C0DD97"/>
+    <text x="555" y="1112" class="fld">+ autoSave()</text>
+    <text x="555" y="1129" class="fld">+ save() / load()</text>
+
+    <rect x="710" y="1066" width="120" height="50" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="725" y="1086" class="cls">SaveSlot</text>
+    <line x1="710" y1="1094" x2="830" y2="1094" stroke="#C0DD97"/>
+    <text x="725" y="1112" class="fld">+ gameData</text>
+
+    <rect x="850" y="1066" width="100" height="50" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="863" y="1086" class="cls">Checkpoint</text>
+    <line x1="850" y1="1094" x2="950" y2="1094" stroke="#C0DD97"/>
+    <text x="863" y="1112" class="fld">+ trigger()</text>
+
+    <rect x="710" y="1128" width="240" height="56" rx="8" fill="#ffffff" stroke="#639922" stroke-width="1"/>
+    <text x="725" y="1148" class="cls">AchievementSystem  ▸ Achievement</text>
+    <line x1="710" y1="1156" x2="950" y2="1156" stroke="#C0DD97"/>
+    <text x="725" y="1174" class="fld">+ unlock(id)   + checkProgress(event)</text>
+
+    <line x1="690" y1="890" x2="708" y2="890" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="830" y1="900" x2="848" y2="900" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#tri)"/>
+    <line x1="690" y1="998" x2="708" y2="998" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="690" y1="1094" x2="708" y2="1094" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="830" y1="1091" x2="848" y2="1091" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ============ AUDIO / UI / SETTINGS ============ -->
+  <g>
+    <rect x="1000" y="820" width="440" height="380" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="1"/>
+    <text x="1020" y="846" class="phdr" fill="#2C2C2A">Audio, UI &amp; settings</text>
+
+    <rect x="1020" y="862" width="150" height="90" rx="8" fill="#ffffff" stroke="#888780" stroke-width="1"/>
+    <text x="1035" y="882" class="cls">AudioManager</text>
+    <line x1="1020" y1="890" x2="1170" y2="890" stroke="#D3D1C7"/>
+    <text x="1035" y="908" class="fld">+ playMusic()</text>
+    <text x="1035" y="925" class="fld">+ playAmbience()</text>
+    <text x="1035" y="942" class="fld">+ playSpatial()</text>
+
+    <rect x="1190" y="862" width="230" height="90" rx="8" fill="#fbfaf7" stroke="#B4B2A9" stroke-width="1"/>
+    <text x="1205" y="882" class="fld">AdaptiveMusic  (composition)</text>
+    <text x="1205" y="902" class="fld">AmbienceLayer  (aggregation)</text>
+    <text x="1205" y="922" class="fld">SpatialSound   (aggregation)</text>
+    <text x="1205" y="944" class="lbl">Audio components</text>
+
+    <rect x="1020" y="972" width="150" height="76" rx="8" fill="#ffffff" stroke="#888780" stroke-width="1"/>
+    <text x="1035" y="992" class="cls">UIManager</text>
+    <line x1="1020" y1="1000" x2="1170" y2="1000" stroke="#D3D1C7"/>
+    <text x="1035" y="1018" class="fld">+ openMenu()</text>
+    <text x="1035" y="1035" class="fld">+ closeAll()</text>
+
+    <rect x="1190" y="972" width="110" height="76" rx="8" fill="#ffffff" stroke="#888780" stroke-width="1"/>
+    <text x="1205" y="992" class="cls">HUD</text>
+    <line x1="1190" y1="1000" x2="1300" y2="1000" stroke="#D3D1C7"/>
+    <text x="1205" y="1018" class="fld">health, stamina</text>
+    <text x="1205" y="1035" class="fld">objectives</text>
+
+    <rect x="1310" y="972" width="110" height="76" rx="8" fill="#ffffff" stroke="#888780" stroke-width="1"/>
+    <text x="1325" y="992" class="cls">PhotoMode</text>
+    <line x1="1310" y1="1000" x2="1420" y2="1000" stroke="#D3D1C7"/>
+    <text x="1325" y="1018" class="fld">+ capture()</text>
+    <text x="1325" y="1035" class="fld">+ filters</text>
+
+    <rect x="1020" y="1068" width="150" height="76" rx="8" fill="#ffffff" stroke="#888780" stroke-width="1"/>
+    <text x="1035" y="1088" class="cls">SettingsManager</text>
+    <line x1="1020" y1="1096" x2="1170" y2="1096" stroke="#D3D1C7"/>
+    <text x="1035" y="1114" class="fld">+ applyAll()</text>
+    <text x="1035" y="1131" class="fld">+ save / load</text>
+
+    <rect x="1190" y="1068" width="230" height="116" rx="8" fill="#fbfaf7" stroke="#B4B2A9" stroke-width="1"/>
+    <text x="1205" y="1088" class="fld">AccessibilitySettings</text>
+    <text x="1205" y="1105" class="lbl">difficulty, subtitles, colorblind,</text>
+    <text x="1205" y="1120" class="lbl">remapping, audio cues</text>
+    <text x="1205" y="1142" class="fld">GraphicsSettings · AudioSettings</text>
+    <text x="1205" y="1160" class="fld">GeneralSettings</text>
+    <text x="1205" y="1178" class="lbl">language · controller support</text>
+
+    <line x1="1170" y1="900" x2="1188" y2="900" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="1170" y1="1000" x2="1188" y2="1000" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="1300" y1="1005" x2="1310" y2="1005" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+    <line x1="1170" y1="1106" x2="1188" y2="1106" stroke="#5f5e5a" stroke-width="1.2" marker-start="url(#dia)"/>
+  </g>
+
+  <!-- ============ CROSS-SYSTEM LINKS from GameManager ============ -->
+  <g stroke="#7F77DD" stroke-width="1.3" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)">
+    <path d="M600 306 L205 360"/>
+    <path d="M660 306 L560 360"/>
+    <path d="M760 306 L880 360"/>
+    <path d="M700 306 L360 700 L490 860"/>
+    <path d="M780 306 L820 700 L740 820"/>
+    <path d="M840 306 L1180 820"/>
+  </g>
+  <text x="380" y="335" class="lbl" fill="#534AB7">GameManager owns / updates every subsystem manager (dashed)</text>
+
+  <!-- ============ LEGEND ============ -->
+  <g>
+    <rect x="40" y="1250" width="1400" height="270" rx="12" fill="#ffffff" stroke="#D3D1C7" stroke-width="1"/>
+    <text x="60" y="1284" class="phdr" fill="#2c2c2a">How to read this diagram</text>
+
+    <line x1="60" y1="1320" x2="150" y2="1320" stroke="#5f5e5a" stroke-width="1.3" marker-start="url(#dia)"/>
+    <text x="165" y="1325" class="lgd">Composition — owner creates &amp; destroys the part (Player ◆ AbilityManager)</text>
+
+    <line x1="60" y1="1352" x2="150" y2="1352" stroke="#5f5e5a" stroke-width="1.3" marker-start="url(#dia)" fill="none"/>
+    <path d="M60 1352 L74 1347 L60 1342" fill="#ffffff" stroke="#5f5e5a" stroke-width="1.2"/>
+    <text x="165" y="1357" class="lgd">Aggregation — references parts it does not own (Inventory ◇ Item)</text>
+
+    <line x1="60" y1="1384" x2="150" y2="1384" stroke="#5f5e5a" stroke-width="1.3" marker-end="url(#tri)"/>
+    <text x="165" y="1389" class="lgd">Inheritance — subclass extends abstract base (DoubleJump ▷ Ability)</text>
+
+    <line x1="60" y1="1416" x2="150" y2="1416" stroke="#5f5e5a" stroke-width="1.3" marker-end="url(#arr)"/>
+    <text x="165" y="1421" class="lgd">Association — one class uses or drives another (Puzzle → Interactable)</text>
+
+    <line x1="60" y1="1448" x2="150" y2="1448" stroke="#7F77DD" stroke-width="1.3" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+    <text x="165" y="1453" class="lgd">Manager wiring — GameManager updates each subsystem via the EventBus</text>
+
+    <text x="60" y="1490" class="lgd" fill="#5f5e5a">«Name» in italics = abstract base class.   $ = static/singleton.   ▸ = subclasses listed inline to save space.</text>
+
+    <!-- color key -->
+    <rect x="800" y="1306" width="18" height="18" rx="4" fill="#E1F5EE" stroke="#0F6E56"/><text x="826" y="1320" class="lgd">Player &amp; abilities</text>
+    <rect x="800" y="1334" width="18" height="18" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="826" y="1348" class="lgd">World, weather &amp; puzzles</text>
+    <rect x="800" y="1362" width="18" height="18" rx="4" fill="#FBEAF0" stroke="#993556"/><text x="826" y="1376" class="lgd">Wildlife &amp; story</text>
+    <rect x="800" y="1390" width="18" height="18" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="826" y="1404" class="lgd">NPCs, dialogue &amp; quests</text>
+    <rect x="1100" y="1306" width="18" height="18" rx="4" fill="#EAF3DE" stroke="#3B6D11"/><text x="1126" y="1320" class="lgd">Inventory, map, save, achievements</text>
+    <rect x="1100" y="1334" width="18" height="18" rx="4" fill="#F1EFE8" stroke="#5F5E5A"/><text x="1126" y="1348" class="lgd">Audio, UI &amp; settings</text>
+    <rect x="1100" y="1362" width="18" height="18" rx="4" fill="#EEEDFE" stroke="#534AB7"/><text x="1126" y="1376" class="lgd">Core loop (GameManager, EventBus)</text>
+  </g>
+</svg>
