@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://sab6hdtwcbyp"]
+
+[ext_resource type="Script" uid="uid://ds0ig5e4wggv0" path="res://Scripts/models/NPC.gd" id="1_tdvfm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s7rlf"]
+
+[node name="Npc" type="Node2D" unique_id=135538201]
+script = ExtResource("1_tdvfm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1369023115]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=133108920]
+shape = SubResource("CircleShape2D_s7rlf")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

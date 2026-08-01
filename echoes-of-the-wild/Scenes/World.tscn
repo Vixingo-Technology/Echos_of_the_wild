@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bjohkr11nnoag"]
+
+[ext_resource type="PackedScene" uid="uid://sab6hdtwcbyp" path="res://Scenes/NPC.tscn" id="1_5nsto"]
+[ext_resource type="PackedScene" uid="uid://db8phb85bl0ku" path="res://Scenes/DialougeUI.tscn" id="2_gjpho"]
+[ext_resource type="Script" uid="uid://075agcmwrlle" path="res://Scripts/Controllers/NPCInteractionController.gd" id="3_p70al"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7rlf"]
+
+[node name="World" type="Node2D" unique_id=1597421399]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1040154543]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2005010068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=61521388]
+shape = SubResource("RectangleShape2D_s7wsd")
+
+[node name="NPC" type="CharacterBody2D" parent="." unique_id=958380617]
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC" unique_id=1830970305]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC" unique_id=228214152]
+shape = SubResource("CircleShape2D_s7wsd")
+
+[node name="Area2D" type="Area2D" parent="NPC" unique_id=346872068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Area2D" unique_id=1253885374]
+shape = SubResource("RectangleShape2D_s7rlf")
+
+[node name="Npc" parent="." unique_id=135538201 instance=ExtResource("1_5nsto")]
+
+[node name="DialougeUi" parent="." unique_id=2101213513 instance=ExtResource("2_gjpho")]
+
+[node name="NPCInteractionController" type="Node" parent="." unique_id=1685040780]
+script = ExtResource("3_p70al")

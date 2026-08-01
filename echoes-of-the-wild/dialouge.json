@@ -1,0 +1,12 @@
+{
+  "forest_guardian": {
+	"npc_id": 1,
+	"npc_name": "Forest Guardian",
+	"npc_type": "Guardian",
+	"dialogues": [
+	  "Welcome, traveler.",
+	  "The forest has been waiting for you.",
+      "Restore the lost voices."
+	]
+  }
+}
