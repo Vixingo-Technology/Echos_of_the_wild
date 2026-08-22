@@ -1,0 +1,147 @@
+{
+  "id": "dino_small.hurt",
+  "rig": "dino_small",
+  "duration": 0.3,
+  "loop": false,
+  "tracks": [
+    {
+      "bone": "hip",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -44,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": -38
+        },
+        {
+          "t": 0.3,
+          "v": -44
+        }
+      ]
+    },
+    {
+      "bone": "body",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -8,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": 14
+        },
+        {
+          "t": 0.3,
+          "v": -8
+        }
+      ]
+    },
+    {
+      "bone": "neck",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -35,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": -8
+        },
+        {
+          "t": 0.3,
+          "v": -35
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 25,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": 48
+        },
+        {
+          "t": 0.3,
+          "v": 25
+        }
+      ]
+    },
+    {
+      "bone": "jaw",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 6,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": 34
+        },
+        {
+          "t": 0.3,
+          "v": 6
+        }
+      ]
+    },
+    {
+      "bone": "legFrontUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": 116
+        },
+        {
+          "t": 0.3,
+          "v": 95
+        }
+      ]
+    },
+    {
+      "bone": "legBackUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.07,
+          "v": 78
+        },
+        {
+          "t": 0.3,
+          "v": 95
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "t": 0,
+      "name": "sfx:dinoHurt"
+    }
+  ]
+}

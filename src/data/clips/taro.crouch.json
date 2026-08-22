@@ -1,0 +1,156 @@
+{
+  "id": "taro.crouch",
+  "rig": "taro",
+  "duration": 1.6,
+  "loop": true,
+  "tracks": [
+    {
+      "bone": "pelvis",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -62
+        },
+        {
+          "t": 0.8,
+          "v": -60
+        },
+        {
+          "t": 1.6,
+          "v": -62
+        }
+      ]
+    },
+    {
+      "bone": "torso",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 20
+        }
+      ]
+    },
+    {
+      "bone": "chest",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 6
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -12
+        }
+      ]
+    },
+    {
+      "bone": "thighFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 130
+        }
+      ]
+    },
+    {
+      "bone": "shinFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95
+        }
+      ]
+    },
+    {
+      "bone": "footFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -80
+        }
+      ]
+    },
+    {
+      "bone": "thighBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 150
+        }
+      ]
+    },
+    {
+      "bone": "shinBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 105
+        }
+      ]
+    },
+    {
+      "bone": "footBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -70
+        }
+      ]
+    },
+    {
+      "bone": "armUpperFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 155
+        }
+      ]
+    },
+    {
+      "bone": "armLowerFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -48
+        }
+      ]
+    },
+    {
+      "bone": "armUpperBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 168
+        }
+      ]
+    },
+    {
+      "bone": "armLowerBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -40
+        }
+      ]
+    }
+  ]
+}

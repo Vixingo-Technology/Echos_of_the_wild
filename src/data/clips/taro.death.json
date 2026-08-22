@@ -1,0 +1,221 @@
+{
+  "id": "taro.death",
+  "rig": "taro",
+  "duration": 0.9,
+  "loop": false,
+  "tracks": [
+    {
+      "bone": "pelvis",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -90,
+          "ease": "quadIn"
+        },
+        {
+          "t": 0.25,
+          "v": -78
+        },
+        {
+          "t": 0.9,
+          "v": -24
+        }
+      ]
+    },
+    {
+      "bone": "torso",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 2,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": -14
+        },
+        {
+          "t": 0.9,
+          "v": 62
+        }
+      ]
+    },
+    {
+      "bone": "chest",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 0
+        },
+        {
+          "t": 0.9,
+          "v": 20
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 0,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": -18
+        },
+        {
+          "t": 0.9,
+          "v": 34
+        }
+      ]
+    },
+    {
+      "bone": "thighFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 178
+        },
+        {
+          "t": 0.9,
+          "v": 118
+        }
+      ]
+    },
+    {
+      "bone": "shinFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 3
+        },
+        {
+          "t": 0.9,
+          "v": 112
+        }
+      ]
+    },
+    {
+      "bone": "footFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -90
+        },
+        {
+          "t": 0.9,
+          "v": -66
+        }
+      ]
+    },
+    {
+      "bone": "thighBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 184
+        },
+        {
+          "t": 0.9,
+          "v": 138
+        }
+      ]
+    },
+    {
+      "bone": "shinBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 5
+        },
+        {
+          "t": 0.9,
+          "v": 96
+        }
+      ]
+    },
+    {
+      "bone": "armUpperFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 180,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": 214
+        },
+        {
+          "t": 0.9,
+          "v": 156
+        }
+      ]
+    },
+    {
+      "bone": "armLowerFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -10
+        },
+        {
+          "t": 0.9,
+          "v": -26
+        }
+      ]
+    },
+    {
+      "bone": "armUpperBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 180,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": 220
+        },
+        {
+          "t": 0.9,
+          "v": 200
+        }
+      ]
+    },
+    {
+      "bone": "armLowerBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -10
+        },
+        {
+          "t": 0.9,
+          "v": -20
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "t": 0,
+      "name": "sfx:death"
+    }
+  ]
+}

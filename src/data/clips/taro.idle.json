@@ -1,0 +1,220 @@
+{
+  "id": "taro.idle",
+  "rig": "taro",
+  "duration": 2.4,
+  "loop": true,
+  "tracks": [
+    {
+      "bone": "torso",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 2
+        },
+        {
+          "t": 1.2,
+          "v": 3.5
+        },
+        {
+          "t": 2.4,
+          "v": 2
+        }
+      ]
+    },
+    {
+      "bone": "chest",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 0
+        },
+        {
+          "t": 1.2,
+          "v": -2.5
+        },
+        {
+          "t": 2.4,
+          "v": 0
+        }
+      ]
+    },
+    {
+      "bone": "chest",
+      "prop": "sy",
+      "keys": [
+        {
+          "t": 0,
+          "v": 1
+        },
+        {
+          "t": 1.2,
+          "v": 1.04
+        },
+        {
+          "t": 2.4,
+          "v": 1
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 1
+        },
+        {
+          "t": 1.1,
+          "v": 3
+        },
+        {
+          "t": 2.4,
+          "v": 1
+        }
+      ]
+    },
+    {
+      "bone": "pelvis",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -90
+        },
+        {
+          "t": 1.2,
+          "v": -88.5
+        },
+        {
+          "t": 2.4,
+          "v": -90
+        }
+      ]
+    },
+    {
+      "bone": "armUpperFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 181
+        },
+        {
+          "t": 1.3,
+          "v": 184
+        },
+        {
+          "t": 2.4,
+          "v": 181
+        }
+      ]
+    },
+    {
+      "bone": "armLowerFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -9
+        },
+        {
+          "t": 1.3,
+          "v": -14
+        },
+        {
+          "t": 2.4,
+          "v": -9
+        }
+      ]
+    },
+    {
+      "bone": "armUpperBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 179
+        },
+        {
+          "t": 1,
+          "v": 176
+        },
+        {
+          "t": 2.4,
+          "v": 179
+        }
+      ]
+    },
+    {
+      "bone": "armLowerBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -7
+        },
+        {
+          "t": 1,
+          "v": -4
+        },
+        {
+          "t": 2.4,
+          "v": -7
+        }
+      ]
+    },
+    {
+      "bone": "thighFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 178
+        }
+      ]
+    },
+    {
+      "bone": "shinFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 3
+        }
+      ]
+    },
+    {
+      "bone": "thighBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 184
+        }
+      ]
+    },
+    {
+      "bone": "shinBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 5
+        }
+      ]
+    },
+    {
+      "bone": "footBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -87
+        }
+      ]
+    }
+  ]
+}

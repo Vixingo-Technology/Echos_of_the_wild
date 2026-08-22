@@ -1,0 +1,209 @@
+{
+  "id": "taro.jumpRise",
+  "rig": "taro",
+  "duration": 0.35,
+  "loop": false,
+  "tracks": [
+    {
+      "bone": "torso",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 8,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.35,
+          "v": 2
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -5
+        },
+        {
+          "t": 0.35,
+          "v": -8
+        }
+      ]
+    },
+    {
+      "bone": "pelvis",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -86,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.35,
+          "v": -92
+        }
+      ]
+    },
+    {
+      "bone": "thighFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 210,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.12,
+          "v": 150
+        },
+        {
+          "t": 0.35,
+          "v": 140
+        }
+      ]
+    },
+    {
+      "bone": "shinFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 15,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.12,
+          "v": 70
+        },
+        {
+          "t": 0.35,
+          "v": 55
+        }
+      ]
+    },
+    {
+      "bone": "footFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -60
+        },
+        {
+          "t": 0.35,
+          "v": -105
+        }
+      ]
+    },
+    {
+      "bone": "thighBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 215
+        },
+        {
+          "t": 0.35,
+          "v": 195
+        }
+      ]
+    },
+    {
+      "bone": "shinBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 10
+        },
+        {
+          "t": 0.35,
+          "v": 40
+        }
+      ]
+    },
+    {
+      "bone": "footBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -62
+        },
+        {
+          "t": 0.35,
+          "v": -95
+        }
+      ]
+    },
+    {
+      "bone": "armUpperFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 140,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.35,
+          "v": 125
+        }
+      ]
+    },
+    {
+      "bone": "armLowerFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -40
+        },
+        {
+          "t": 0.35,
+          "v": -25
+        }
+      ]
+    },
+    {
+      "bone": "armUpperBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 215
+        },
+        {
+          "t": 0.35,
+          "v": 228
+        }
+      ]
+    },
+    {
+      "bone": "armLowerBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -20
+        },
+        {
+          "t": 0.35,
+          "v": -10
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "t": 0,
+      "name": "sfx:jump"
+    }
+  ]
+}

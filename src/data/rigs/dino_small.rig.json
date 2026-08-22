@@ -1,0 +1,44 @@
+{
+  "id": "dino_small",
+  "height": 70,
+  "_convention": "Same as taro.rig.json: origin at the ground contact point, +X right, +Y down, a bone's local +X points along the bone. Rest rotations put the dino in a neutral standing profile facing right. Digitigrade legs: upper ~95 (down and slightly back), lower negative (knee forward), foot negative (toes forward). The tail is driven by ProceduralMotion, so authoring tail tracks does nothing.",
+  "bones": [
+    { "id": "root", "parent": null, "x": 0, "y": 0, "rotation": 0, "length": 0, "z": 0 },
+    { "id": "hip", "parent": "root", "x": 0, "y": -44, "rotation": 0, "length": 0, "z": 20,
+      "placeholder": { "w": 26, "h": 28, "color": 3369088, "anchorX": 0.5, "anchorY": 0.5, "radius": 9 } },
+
+    { "id": "body", "parent": "hip", "x": 0, "y": 0, "rotation": -8, "length": 38, "z": 22,
+      "placeholder": { "w": 42, "h": 30, "color": 3697723, "anchorX": 0.0, "anchorY": 0.5, "radius": 11 } },
+    { "id": "neck", "parent": "body", "x": 38, "y": 0, "rotation": -35, "length": 18, "z": 24,
+      "placeholder": { "w": 20, "h": 17, "color": 4092476, "anchorX": 0.0, "anchorY": 0.5, "radius": 7 } },
+    { "id": "head", "parent": "neck", "x": 18, "y": 0, "rotation": 25, "length": 22, "z": 30,
+      "placeholder": { "w": 26, "h": 17, "color": 4553783, "anchorX": 0.0, "anchorY": 0.4, "radius": 6 } },
+    { "id": "jaw", "parent": "head", "x": 3, "y": 6, "rotation": 6, "length": 17, "z": 29,
+      "placeholder": { "w": 19, "h": 8, "color": 3434052, "anchorX": 0.0, "anchorY": 0.3, "radius": 3 } },
+
+    { "id": "tailA", "parent": "hip", "x": 0, "y": 0, "rotation": 190, "length": 22, "z": 18,
+      "placeholder": { "w": 23, "h": 20, "color": 3697723, "anchorX": 0.0, "anchorY": 0.5, "radius": 8 } },
+    { "id": "tailB", "parent": "tailA", "x": 22, "y": 0, "rotation": 0, "length": 20, "z": 17,
+      "placeholder": { "w": 21, "h": 15, "color": 3302970, "anchorX": 0.0, "anchorY": 0.5, "radius": 6 } },
+    { "id": "tailC", "parent": "tailB", "x": 20, "y": 0, "rotation": 0, "length": 16, "z": 16,
+      "placeholder": { "w": 17, "h": 10, "color": 2842919, "anchorX": 0.0, "anchorY": 0.5, "radius": 4 } },
+
+    { "id": "legBackUpper", "parent": "hip", "x": 0, "y": -5, "rotation": 95, "length": 22, "z": 10,
+      "placeholder": { "w": 23, "h": 16, "color": 2578217, "anchorX": 0.0, "anchorY": 0.5, "radius": 6 } },
+    { "id": "legBackLower", "parent": "legBackUpper", "x": 22, "y": 0, "rotation": -28, "length": 20, "z": 11,
+      "placeholder": { "w": 21, "h": 10, "color": 2249264, "anchorX": 0.0, "anchorY": 0.5, "radius": 4 } },
+    { "id": "footBack", "parent": "legBackLower", "x": 20, "y": 0, "rotation": -62, "length": 15,
+      "z": 12, "placeholder": { "w": 17, "h": 7, "color": 1855518, "anchorX": 0.2, "anchorY": 0.5, "radius": 3 } },
+    { "id": "armBack", "parent": "body", "x": 29, "y": -5, "rotation": 100, "length": 12, "z": 13,
+      "placeholder": { "w": 13, "h": 8, "color": 2578217, "anchorX": 0.0, "anchorY": 0.5, "radius": 3 } },
+
+    { "id": "legFrontUpper", "parent": "hip", "x": 0, "y": 5, "rotation": 95, "length": 22, "z": 34,
+      "placeholder": { "w": 23, "h": 17, "color": 4092476, "anchorX": 0.0, "anchorY": 0.5, "radius": 6 } },
+    { "id": "legFrontLower", "parent": "legFrontUpper", "x": 22, "y": 0, "rotation": -28, "length": 20, "z": 35,
+      "placeholder": { "w": 21, "h": 11, "color": 3697723, "anchorX": 0.0, "anchorY": 0.5, "radius": 4 } },
+    { "id": "footFront", "parent": "legFrontLower", "x": 20, "y": 0, "rotation": -62, "length": 15,
+      "z": 36, "placeholder": { "w": 17, "h": 8, "color": 2578217, "anchorX": 0.2, "anchorY": 0.5, "radius": 3 } },
+    { "id": "armFront", "parent": "body", "x": 29, "y": 5, "rotation": 100, "length": 12, "z": 38,
+      "placeholder": { "w": 13, "h": 9, "color": 4092476, "anchorX": 0.0, "anchorY": 0.5, "radius": 3 } }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "id": "taro.land",
+  "rig": "taro",
+  "duration": 0.28,
+  "loop": false,
+  "tracks": [
+    {
+      "bone": "torso",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 6,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 18,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": 0
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 0,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 8
+        },
+        {
+          "t": 0.28,
+          "v": 0
+        }
+      ]
+    },
+    {
+      "bone": "pelvis",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -90,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": -74,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": -90
+        }
+      ]
+    },
+    {
+      "bone": "thighFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 150,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 138,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": 180
+        }
+      ]
+    },
+    {
+      "bone": "shinFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 40,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 72,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": 3
+        }
+      ]
+    },
+    {
+      "bone": "footFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -100
+        },
+        {
+          "t": 0.08,
+          "v": -88
+        },
+        {
+          "t": 0.28,
+          "v": -90
+        }
+      ]
+    },
+    {
+      "bone": "thighBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 200,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 214,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": 180
+        }
+      ]
+    },
+    {
+      "bone": "shinBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 25,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 70,
+          "ease": "backOut"
+        },
+        {
+          "t": 0.28,
+          "v": 3
+        }
+      ]
+    },
+    {
+      "bone": "footBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -92
+        },
+        {
+          "t": 0.08,
+          "v": -86
+        },
+        {
+          "t": 0.28,
+          "v": -90
+        }
+      ]
+    },
+    {
+      "bone": "armUpperFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 130,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 155
+        },
+        {
+          "t": 0.28,
+          "v": 180
+        }
+      ]
+    },
+    {
+      "bone": "armLowerFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -30,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": -55
+        },
+        {
+          "t": 0.28,
+          "v": -10
+        }
+      ]
+    },
+    {
+      "bone": "armUpperBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 228,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": 205
+        },
+        {
+          "t": 0.28,
+          "v": 180
+        }
+      ]
+    },
+    {
+      "bone": "armLowerBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -12,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.08,
+          "v": -50
+        },
+        {
+          "t": 0.28,
+          "v": -10
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "t": 0,
+      "name": "sfx:land"
+    },
+    {
+      "t": 0,
+      "name": "footstep"
+    }
+  ]
+}

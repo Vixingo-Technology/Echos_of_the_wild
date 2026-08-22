@@ -1,0 +1,45 @@
+{
+  "id": "intro",
+  "panels": [
+    {
+      "art": "city",
+      "caption": "Neo-Kanda, 2077. Rain on neon, and a city that never once looked up.",
+      "durationMs": 5200
+    },
+    {
+      "art": "lab",
+      "caption": "Six floors below it, Taro had been awake for four days.",
+      "durationMs": 5000
+    },
+    {
+      "art": "activate",
+      "caption": "The ring drew more power than the whole district. He threw the lever anyway.",
+      "durationMs": 5000
+    },
+    {
+      "art": "portal",
+      "caption": "And it opened. A hole in the year, humming like a struck bell.",
+      "durationMs": 4800
+    },
+    {
+      "art": "collapse",
+      "caption": "Then the field folded. The lab tore loose around him.",
+      "durationMs": 4600
+    },
+    {
+      "art": "arrival",
+      "caption": "He landed in wet green air, sixty-six million years from the lever.",
+      "durationMs": 5400
+    },
+    {
+      "art": "remote",
+      "caption": "The remote still worked. It simply had nothing here to hold on to — the magnetic field was all wrong.",
+      "durationMs": 5800
+    },
+    {
+      "art": "resolve",
+      "caption": "So: find whatever in this age is strong enough to steady it. Then go home.",
+      "durationMs": 5400
+    }
+  ]
+}

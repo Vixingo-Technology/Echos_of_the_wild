@@ -1,0 +1,390 @@
+{
+  "id": "taro",
+  "height": 174,
+  "_convention": "Origin at the ground contact point between the feet. +X right, +Y DOWN. A bone's local +X axis points along the bone, so rest rotation -90 = pointing up, +90 = pointing down, 180 = reversed from the parent. Joint bones (shin, forearm) rest at 0, meaning 'straight continuation of the parent', so a clip value of 30 reads directly as 'bent 30 degrees'.",
+  "bones": [
+    {
+      "id": "root",
+      "parent": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "length": 0,
+      "z": 0
+    },
+    {
+      "id": "pelvis",
+      "parent": "root",
+      "x": 0,
+      "y": -90,
+      "rotation": -90,
+      "length": 0,
+      "z": 21,
+      "placeholder": {
+        "w": 26,
+        "h": 22,
+        "color": 3355466,
+        "anchorX": 0.5,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "torso",
+      "parent": "pelvis",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "length": 34,
+      "z": 22,
+      "placeholder": {
+        "w": 34,
+        "h": 30,
+        "color": 2833237,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 8
+      }
+    },
+    {
+      "id": "chest",
+      "parent": "torso",
+      "x": 34,
+      "y": 0,
+      "rotation": 0,
+      "length": 22,
+      "z": 24,
+      "placeholder": {
+        "w": 26,
+        "h": 34,
+        "color": 3359583,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 8
+      }
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "x": 22,
+      "y": 0,
+      "rotation": 0,
+      "length": 28,
+      "z": 30,
+      "placeholder": {
+        "w": 30,
+        "h": 28,
+        "color": 15243922,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 10
+      }
+    },
+    {
+      "id": "hairA",
+      "parent": "head",
+      "x": 18,
+      "y": -10,
+      "rotation": 200,
+      "length": 14,
+      "z": 23,
+      "placeholder": {
+        "w": 15,
+        "h": 13,
+        "color": 2760728,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "hairB",
+      "parent": "hairA",
+      "x": 14,
+      "y": 0,
+      "rotation": 0,
+      "length": 13,
+      "z": 22,
+      "placeholder": {
+        "w": 14,
+        "h": 11,
+        "color": 2235174,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "backpack",
+      "parent": "chest",
+      "x": 10,
+      "y": -16,
+      "rotation": 180,
+      "length": 0,
+      "z": 20,
+      "placeholder": {
+        "w": 30,
+        "h": 34,
+        "color": 7035198,
+        "anchorX": 0.2,
+        "anchorY": 0.5,
+        "radius": 7
+      }
+    },
+    {
+      "id": "coatA",
+      "parent": "chest",
+      "x": 2,
+      "y": -12,
+      "rotation": 180,
+      "length": 28,
+      "z": 19,
+      "placeholder": {
+        "w": 29,
+        "h": 36,
+        "color": 14540253,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "coatB",
+      "parent": "coatA",
+      "x": 28,
+      "y": 0,
+      "rotation": 0,
+      "length": 28,
+      "z": 18,
+      "placeholder": {
+        "w": 29,
+        "h": 33,
+        "color": 13750737,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "coatC",
+      "parent": "coatB",
+      "x": 28,
+      "y": 0,
+      "rotation": 0,
+      "length": 26,
+      "z": 17,
+      "placeholder": {
+        "w": 27,
+        "h": 28,
+        "color": 12960693,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "armUpperBack",
+      "parent": "chest",
+      "x": 18,
+      "y": -4,
+      "rotation": 180,
+      "length": 30,
+      "z": 10,
+      "placeholder": {
+        "w": 31,
+        "h": 13,
+        "color": 1907776,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "armLowerBack",
+      "parent": "armUpperBack",
+      "x": 30,
+      "y": 0,
+      "rotation": 0,
+      "length": 28,
+      "z": 11,
+      "placeholder": {
+        "w": 29,
+        "h": 11,
+        "color": 1908001,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "handBack",
+      "parent": "armLowerBack",
+      "x": 28,
+      "y": 0,
+      "rotation": 0,
+      "length": 12,
+      "z": 12,
+      "placeholder": {
+        "w": 14,
+        "h": 14,
+        "color": 10714978,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "thighBack",
+      "parent": "pelvis",
+      "x": 0,
+      "y": -4,
+      "rotation": 180,
+      "length": 44,
+      "z": 14,
+      "placeholder": {
+        "w": 45,
+        "h": 16,
+        "color": 2371105,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 7
+      }
+    },
+    {
+      "id": "shinBack",
+      "parent": "thighBack",
+      "x": 44,
+      "y": 0,
+      "rotation": 0,
+      "length": 42,
+      "z": 15,
+      "placeholder": {
+        "w": 43,
+        "h": 13,
+        "color": 2237986,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "footBack",
+      "parent": "shinBack",
+      "x": 42,
+      "y": 0,
+      "rotation": -90,
+      "length": 22,
+      "z": 16,
+      "placeholder": {
+        "w": 24,
+        "h": 9,
+        "color": 1315860,
+        "anchorX": 0.25,
+        "anchorY": 0.5,
+        "radius": 4
+      }
+    },
+    {
+      "id": "thighFront",
+      "parent": "pelvis",
+      "x": 0,
+      "y": 4,
+      "rotation": 180,
+      "length": 44,
+      "z": 34,
+      "placeholder": {
+        "w": 45,
+        "h": 17,
+        "color": 3819594,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 7
+      }
+    },
+    {
+      "id": "shinFront",
+      "parent": "thighFront",
+      "x": 44,
+      "y": 0,
+      "rotation": 0,
+      "length": 42,
+      "z": 35,
+      "placeholder": {
+        "w": 43,
+        "h": 14,
+        "color": 3421236,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "footFront",
+      "parent": "shinFront",
+      "x": 42,
+      "y": 0,
+      "rotation": -90,
+      "length": 22,
+      "z": 36,
+      "placeholder": {
+        "w": 24,
+        "h": 10,
+        "color": 2368026,
+        "anchorX": 0.25,
+        "anchorY": 0.5,
+        "radius": 4
+      }
+    },
+    {
+      "id": "armUpperFront",
+      "parent": "chest",
+      "x": 18,
+      "y": 4,
+      "rotation": 180,
+      "length": 30,
+      "z": 40,
+      "placeholder": {
+        "w": 31,
+        "h": 14,
+        "color": 2833237,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 6
+      }
+    },
+    {
+      "id": "armLowerFront",
+      "parent": "armUpperFront",
+      "x": 30,
+      "y": 0,
+      "rotation": 0,
+      "length": 28,
+      "z": 41,
+      "placeholder": {
+        "w": 29,
+        "h": 12,
+        "color": 3359583,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 5
+      }
+    },
+    {
+      "id": "handFront",
+      "parent": "armLowerFront",
+      "x": 28,
+      "y": 0,
+      "rotation": 0,
+      "length": 12,
+      "z": 42,
+      "placeholder": {
+        "w": 15,
+        "h": 15,
+        "color": 15243922,
+        "anchorX": 0.0,
+        "anchorY": 0.5,
+        "radius": 7
+      }
+    }
+  ]
+}

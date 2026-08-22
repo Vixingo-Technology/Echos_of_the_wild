@@ -1,0 +1,146 @@
+{
+  "id": "dino_small.idle",
+  "rig": "dino_small",
+  "duration": 2,
+  "loop": true,
+  "tracks": [
+    {
+      "bone": "hip",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -44
+        },
+        {
+          "t": 1,
+          "v": -42
+        },
+        {
+          "t": 2,
+          "v": -44
+        }
+      ]
+    },
+    {
+      "bone": "body",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -8
+        },
+        {
+          "t": 1,
+          "v": -5
+        },
+        {
+          "t": 2,
+          "v": -8
+        }
+      ]
+    },
+    {
+      "bone": "neck",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -35
+        },
+        {
+          "t": 0.7,
+          "v": -30
+        },
+        {
+          "t": 1.4,
+          "v": -38
+        },
+        {
+          "t": 2,
+          "v": -35
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 25
+        },
+        {
+          "t": 0.7,
+          "v": 20
+        },
+        {
+          "t": 1.4,
+          "v": 28
+        },
+        {
+          "t": 2,
+          "v": 25
+        }
+      ]
+    },
+    {
+      "bone": "jaw",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 6
+        },
+        {
+          "t": 1.2,
+          "v": 9
+        },
+        {
+          "t": 2,
+          "v": 6
+        }
+      ]
+    },
+    {
+      "bone": "legBackUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95
+        }
+      ]
+    },
+    {
+      "bone": "legBackLower",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -28
+        }
+      ]
+    },
+    {
+      "bone": "legFrontUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95
+        }
+      ]
+    },
+    {
+      "bone": "legFrontLower",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -28
+        }
+      ]
+    }
+  ]
+}

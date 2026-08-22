@@ -1,0 +1,191 @@
+{
+  "id": "dino_small.death",
+  "rig": "dino_small",
+  "duration": 0.8,
+  "loop": false,
+  "tracks": [
+    {
+      "bone": "hip",
+      "prop": "y",
+      "keys": [
+        {
+          "t": 0,
+          "v": -44,
+          "ease": "quadIn"
+        },
+        {
+          "t": 0.2,
+          "v": -50
+        },
+        {
+          "t": 0.8,
+          "v": -14
+        }
+      ]
+    },
+    {
+      "bone": "body",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -8,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": -30
+        },
+        {
+          "t": 0.8,
+          "v": 12
+        }
+      ]
+    },
+    {
+      "bone": "neck",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -35,
+          "ease": "quadOut"
+        },
+        {
+          "t": 0.2,
+          "v": -62
+        },
+        {
+          "t": 0.8,
+          "v": 22
+        }
+      ]
+    },
+    {
+      "bone": "head",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 25
+        },
+        {
+          "t": 0.2,
+          "v": 50
+        },
+        {
+          "t": 0.8,
+          "v": 62
+        }
+      ]
+    },
+    {
+      "bone": "jaw",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 6
+        },
+        {
+          "t": 0.2,
+          "v": 40
+        },
+        {
+          "t": 0.8,
+          "v": 26
+        }
+      ]
+    },
+    {
+      "bone": "legFrontUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95
+        },
+        {
+          "t": 0.8,
+          "v": 34
+        }
+      ]
+    },
+    {
+      "bone": "legFrontLower",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -28
+        },
+        {
+          "t": 0.8,
+          "v": -96
+        }
+      ]
+    },
+    {
+      "bone": "legBackUpper",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 95
+        },
+        {
+          "t": 0.8,
+          "v": 26
+        }
+      ]
+    },
+    {
+      "bone": "legBackLower",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": -28
+        },
+        {
+          "t": 0.8,
+          "v": -104
+        }
+      ]
+    },
+    {
+      "bone": "armFront",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 100
+        },
+        {
+          "t": 0.8,
+          "v": 54
+        }
+      ]
+    },
+    {
+      "bone": "armBack",
+      "prop": "rot",
+      "keys": [
+        {
+          "t": 0,
+          "v": 100
+        },
+        {
+          "t": 0.8,
+          "v": 48
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "t": 0,
+      "name": "sfx:dinoDeath"
+    }
+  ]
+}
