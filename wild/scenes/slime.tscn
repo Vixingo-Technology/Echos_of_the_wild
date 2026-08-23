@@ -1,0 +1,88 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/slime_green.png" id="1_slime"]
+[ext_resource type="Script" path="res://scripts/slime.gd" id="1_script"]
+[ext_resource type="AudioStream" path="res://assets/sounds/tap.wav" id="2_deathsound"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_move0"]
+atlas = ExtResource("1_slime")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_move1"]
+atlas = ExtResource("1_slime")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_move2"]
+atlas = ExtResource("1_slime")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_move3"]
+atlas = ExtResource("1_slime")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hurt0"]
+atlas = ExtResource("1_slime")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slime"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_move0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_move1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_move2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_move3")
+}],
+"loop": true,
+"name": &"move",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hurt0")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurtbox"]
+size = Vector2(22, 18)
+
+[node name="Slime" type="CharacterBody2D"]
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_slime")
+animation = &"move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_body")
+
+[node name="WallCheck" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(-10, 0)
+
+[node name="FloorCheck" type="RayCast2D" parent="."]
+position = Vector2(-10, -8)
+target_position = Vector2(0, 12)
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_hurtbox")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_deathsound")
