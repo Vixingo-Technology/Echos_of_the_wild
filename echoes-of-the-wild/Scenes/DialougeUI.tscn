@@ -34,6 +34,5 @@ text = "Welcome, traveler."
 [node name="NextButton" type="Button" parent="Panel/VBoxContainer" unique_id=144038251]
 layout_mode = 2
 text = "Next"
-script = ExtResource("1_oyn25")
 
 [connection signal="pressed" from="Panel/VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
