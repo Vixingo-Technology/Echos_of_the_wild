@@ -1,40 +1,67 @@
-[gd_scene format=3 uid="uid://bjohkr11nnoag"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="PackedScene" uid="uid://sab6hdtwcbyp" path="res://Scenes/NPC.tscn" id="1_5nsto"]
-[ext_resource type="PackedScene" uid="uid://db8phb85bl0ku" path="res://Scenes/DialougeUI.tscn" id="2_gjpho"]
-[ext_resource type="Script" uid="uid://075agcmwrlle" path="res://Scripts/Controllers/NPCInteractionController.gd" id="3_p70al"]
+[ext_resource type="Script" path="res://Scripts/World.gd" id="1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
-size = Vector2(32, 32)
+[node name="World" type="Node2D"]
+script = ExtResource("1")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s7wsd"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(600, 350)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7rlf"]
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="World" type="Node2D" unique_id=1597421399]
+[node name="Info" type="Label" parent="UI"]
+offset_left = 20.0
+offset_top = 650.0
+offset_right = 1160.0
+offset_bottom = 690.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "E: interact   Q: quests   M: map   T: weather"
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1040154543]
+[node name="Weather" type="Label" parent="UI"]
+offset_left = 930.0
+offset_top = 20.0
+offset_right = 1160.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 20
+text = "Weather: Clear"
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2005010068]
+[node name="QuestPanel" type="ColorRect" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 360.0
+offset_bottom = 145.0
+color = Color(0.04, 0.08, 0.05, 0.82)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=61521388]
-shape = SubResource("RectangleShape2D_s7wsd")
+[node name="Quest" type="Label" parent="UI/QuestPanel"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 330.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 17
+text = "QUESTS (Q)"
 
-[node name="NPC" type="CharacterBody2D" parent="." unique_id=958380617]
+[node name="MapPanel" type="ColorRect" parent="UI"]
+visible = false
+offset_left = 250.0
+offset_top = 90.0
+offset_right = 950.0
+offset_bottom = 610.0
+color = Color(0.08, 0.12, 0.08, 0.96)
 
-[node name="Sprite2D" type="Sprite2D" parent="NPC" unique_id=1830970305]
+[node name="Title" type="Label" parent="UI/MapPanel"]
+offset_left = 245.0
+offset_top = 20.0
+offset_right = 470.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 28
+text = "MAP & NAVIGATION"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC" unique_id=228214152]
-shape = SubResource("CircleShape2D_s7wsd")
-
-[node name="Area2D" type="Area2D" parent="NPC" unique_id=346872068]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Area2D" unique_id=1253885374]
-shape = SubResource("RectangleShape2D_s7rlf")
-
-[node name="Npc" parent="." unique_id=135538201 instance=ExtResource("1_5nsto")]
-
-[node name="DialougeUi" parent="." unique_id=2101213513 instance=ExtResource("2_gjpho")]
-
-[node name="NPCInteractionController" type="Node" parent="." unique_id=1685040780]
-script = ExtResource("3_p70al")
+[node name="MapText" type="Label" parent="UI/MapPanel"]
+offset_left = 100.0
+offset_top = 85.0
+offset_right = 620.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 22
+text = "FOREST MAP"
