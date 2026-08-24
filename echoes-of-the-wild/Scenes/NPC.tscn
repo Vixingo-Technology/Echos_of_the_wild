@@ -4,7 +4,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7rlf"]
 
-[node name="Npc" type="Node2D" unique_id=135538201]
+[node name="Npc" type="CharacterBody2D" unique_id=135538201]
 script = ExtResource("1_tdvfm")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1369023115]
