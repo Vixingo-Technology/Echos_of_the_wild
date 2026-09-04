@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b7acjrmtlk8rr" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cu0444cmobcvd" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="3_slime"]
+[ext_resource type="Script" uid="uid://c4h1vcrm3olou" path="res://scripts/photo_mode.gd" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -202,3 +203,6 @@ position = Vector2(472, -100)
 
 [node name="Slime4" parent="." unique_id=2046418321 instance=ExtResource("3_slime")]
 position = Vector2(712, -100)
+
+[node name="PhotoMode" type="Node" parent="." unique_id=271143460]
+script = ExtResource("4_lbhrr")

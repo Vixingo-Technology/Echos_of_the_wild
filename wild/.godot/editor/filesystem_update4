@@ -1,2 +1,3 @@
 res://scenes/game.tscn
 res://scripts/autoload/AudioManager.gd
+res://scripts/photo_mode.gd
