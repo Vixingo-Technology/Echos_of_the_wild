@@ -191,14 +191,14 @@ position = Vector2(0, -7)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="Slime1" parent="." instance=ExtResource("3_slime")]
+[node name="Slime1" parent="." unique_id=1027651213 instance=ExtResource("3_slime")]
 position = Vector2(64, -120)
 
-[node name="Slime2" parent="." instance=ExtResource("3_slime")]
+[node name="Slime2" parent="." unique_id=340427020 instance=ExtResource("3_slime")]
 position = Vector2(-64, -120)
 
-[node name="Slime3" parent="." instance=ExtResource("3_slime")]
+[node name="Slime3" parent="." unique_id=49877854 instance=ExtResource("3_slime")]
 position = Vector2(472, -100)
 
-[node name="Slime4" parent="." instance=ExtResource("3_slime")]
+[node name="Slime4" parent="." unique_id=2046418321 instance=ExtResource("3_slime")]
 position = Vector2(712, -100)

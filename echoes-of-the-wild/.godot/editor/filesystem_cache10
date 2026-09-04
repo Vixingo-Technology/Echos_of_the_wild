@@ -1,0 +1,16 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1788370253
+dialouge.json::JSON::-1::1788368890::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::8960883244003498378::1788368890::1788369890::1::::<><><>0<>0<>9c1733f31a73e69cb8b7ea9649a59ee6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Scenes/::1788368890
+DialougeUI.tscn::PackedScene::7298498720916895924::1788368890::0::1::::<><><>0<>0<><>::uid://k7fj5rg455od::::res://Scripts/View/DialougeUI.gd
+NPC.tscn::PackedScene::1263515635279018451::1788368890::0::1::::<><><>0<>0<><>::uid://ds0ig5e4wggv0::::res://Scripts/models/NPC.gd
+World.tscn::PackedScene::3047465376141731382::1788368890::0::1::::<><><>0<>0<><>::uid://sab6hdtwcbyp::::res://Scenes/NPC.tscn<>uid://db8phb85bl0ku::::res://Scenes/DialougeUI.tscn<>uid://075agcmwrlle::::res://Scripts/Controllers/NPCInteractionController.gd<>res://Scripts/World.gd
+::res://Scripts/::1788369890
+World.gd::GDScript::2011401069961077247::1788368890::0::1::::<>Node2D<><>0<>0<><>::
+::res://Scripts/Controllers/::1788368890
+NPCInteractionController.gd::GDScript::1822603007668731790::1788368890::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/models/::1788368890
+NPC.gd::GDScript::8474768714347933739::1788368890::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scripts/View/::1788368890
+DialougeUI.gd::GDScript::768269783893973015::1788368890::0::1::::<>CanvasLayer<><>0<>0<><>::

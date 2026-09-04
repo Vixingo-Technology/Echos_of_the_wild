@@ -13,7 +13,11 @@ config_version=5
 config/name="wild"
 run/main_scene="uid://d3jfx8jl64w75"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://dld71uhn0ytwx"
+
+[autoload]
+
+AudioManager="*uid://dj0iwvjnmhkcu"
 
 [display]
 
