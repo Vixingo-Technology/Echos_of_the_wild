@@ -1,1 +1,9 @@
+Button
+Label
+HBoxContainer
+HSlider
+VBoxContainer
+PanelContainer
+Control
+CanvasLayer
 Node

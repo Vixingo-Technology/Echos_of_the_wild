@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://d3jfx8jl64w75"]
 
+[ext_resource type="Script" uid="uid://dw1hefu5eabqp" path="res://scripts/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b7acjrmtlk8rr" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cu0444cmobcvd" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="3_slime"]
 [ext_resource type="Script" uid="uid://c4h1vcrm3olou" path="res://scripts/photo_mode.gd" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dejwt3hpeftei" path="res://scenes/settings_menu.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -178,6 +180,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="game" type="Node2D" unique_id=738002745]
+script = ExtResource("1_p57ef")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1536572449]
 tile_set = SubResource("TileSet_k53qp")
@@ -206,3 +209,6 @@ position = Vector2(712, -100)
 
 [node name="PhotoMode" type="Node" parent="." unique_id=271143460]
 script = ExtResource("4_lbhrr")
+
+[node name="SettingsMenu" parent="." unique_id=1590499095 instance=ExtResource("5_iywne")]
+visible = false

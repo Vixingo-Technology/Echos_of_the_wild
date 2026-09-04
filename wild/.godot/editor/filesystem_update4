@@ -1,3 +1,4 @@
+res://scripts/settings_manager.gd
+res://scenes/settings_menu.tscn
+res://scenes/settings_menu.gd
 res://scenes/game.tscn
-res://scripts/autoload/AudioManager.gd
-res://scripts/photo_mode.gd

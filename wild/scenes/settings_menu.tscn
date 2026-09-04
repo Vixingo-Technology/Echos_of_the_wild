@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dejwt3hpeftei"]
+
+[ext_resource type="Script" uid="uid://boelyl7bsdcio" path="res://scenes/settings_menu.gd" id="1_05p07"]
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=1590499095]
+script = ExtResource("1_05p07")
+
+[node name="Control" type="Control" parent="." unique_id=2055209659]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1163490472]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer" unique_id=478099334]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer" unique_id=2073027644]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer" unique_id=855955837]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterSlider" type="HSlider" parent="Control/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1340916353]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer" unique_id=141872414]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=296389766]
+layout_mode = 2
+text = "BGM Volume"
+
+[node name="BGMSlider" type="HSlider" parent="Control/PanelContainer/VBoxContainer/HBoxContainer2" unique_id=1562806405]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="CloseButton" type="Button" parent="Control/PanelContainer/VBoxContainer" unique_id=137381766]
+layout_mode = 2
+text = "Closes"
